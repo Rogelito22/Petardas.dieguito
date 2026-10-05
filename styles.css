@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000000;
+  /* Fondo fijo usando la imagen del autobús */
+  background-image: url('bus.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  padding: 20px 10px;
+}
+
+/* --- Wrapper Principal --- */
+.myspace-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.45); /* Fondo semitransparente para ver el fondo del autobús */
+  border: 2px solid #0066ff;
+  box-shadow: 0 0 20px rgba(0, 102, 255, 0.7);
+  backdrop-filter: blur(2px); /* Ligero desenfoque para mejorar la legibilidad del texto */
+}
+
+/* --- Navegación MySpace --- */
+.myspace-nav {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #0066ff;
+}
+
+.myspace-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.myspace-nav a:hover {
+  color: #00f0ff;
+  text-decoration: underline;
+}
+
+/* --- Layout Principal (Dos Columnas) --- */
+.profile-container {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+}
+
+.left-column {
+  width: 320px;
+  flex-shrink: 0;
+}
+
+.right-column {
+  flex: 1;
+}
+
+/* --- Columna Izquierda --- */
+.user-name {
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-family: 'VT323', monospace;
+}
+
+.profile-card {
+  background-color: rgba(0, 102, 255, 0.75);
+  border: 2px solid #ffffff;
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.avatar-box {
+  width: 140px;
+  height: 180px;
+  border-right: 2px solid #ffffff;
+  overflow: hidden;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(1.05) brightness(1);
+}
+
+.quote-box {
+  padding: 10px;
+  color: #ffffff;
+  font-size: 12px;
+  flex: 1;
+}
+
+.quote-box p {
+  margin-bottom: 8px;
+}
+
+.last-login {
+  font-size: 10px;
+  color: #b3d1ff;
+}
+
+.action-box {
+  background-color: rgba(17, 17, 17, 0.6);
+  border: 2px solid #0066ff;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.action-btn {
+  background: #0066ff;
+  color: white;
+  border: 1px solid #ffffff;
+  padding: 5px;
+  text-align: left;
+  font-size: 11px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.action-btn:hover {
+  background: #0044cc;
+}
+
+.url-box {
+  background-color: rgba(0, 102, 255, 0.75);
+  padding: 8px;
+  border: 2px solid #ffffff;
+}
+
+.url-box input {
+  width: 100%;
+  font-size: 10px;
+  margin-top: 4px;
+}
+
+/* --- Columna Derecha --- */
+.blue-banner {
+  background-color: rgba(0, 102, 255, 0.85);
+  color: #ffffff;
+  font-weight: bold;
+  padding: 8px;
+  border: 2px solid #ffffff;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.content-block {
+  background-color: rgba(0, 0, 0, 0.55);
+  border: 2px solid #0066ff;
+  padding: 12px;
+  margin-bottom: 15px;
+}
+
+.content-block h2 {
+  color: #ffffff;
+  font-size: 14px;
+  border-bottom: 1px solid #0066ff;
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 12px;
+  margin-bottom: 8px;
+  color: #80b3ff;
+}
+
+.blurb-section {
+  background-color: rgba(0, 102, 255, 0.75);
+  color: #ffffff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ffffff;
+}
+
+.blurb-section h3 {
+  font-size: 13px;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+/* --- Estilos del Creador de Blinkies --- */
+.controls-grid {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+  background-color: rgba(17, 17, 17, 0.6);
+  padding: 8px;
+  border: 1px dashed #0066ff;
+}
+
+.control-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.control-row input[type="text"], .control-row select {
+  font-size: 11px;
+  padding: 2px;
+}
+
+.blinkies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 8px;
+  justify-items: center;
+}
+
+/* Elemento Blinkie Retro (150x20px) */
+.blinkie {
+  width: 150px;
+  height: 20px;
+  border: 1px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 8px;
+  color: #ffffff;
+  text-shadow: 1px 1px 0px #000000;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px #0066ff;
+  animation: blinkieAnim 1s steps(2, start) infinite;
+}
+
+@keyframes blinkieAnim {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(1.3) contrast(1.2); }
+  100% { filter: brightness(1); }
+}
+
+.blinkie.frozen {
+  animation: none !important;
+}
+
+.bg-1 { background: linear-gradient(90deg, #0055ff, #7700ff); }
+.bg-2 { background: linear-gradient(90deg, #00ffcc, #0055ff); }
+.bg-3 { background: linear-gradient(90deg, #00d4ff, #0022ff); }
+.bg-4 { background: linear-gradient(90deg, #00ff66, #00aaff); }
+.bg-5 { background: linear-gradient(90deg, #8800ff, #00ffff); }
+
+/* --- Modal Editor --- */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-content {
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 3px solid #0066ff;
+  width: 320px;
+}
+
+.modal-header {
+  background-color: #0066ff;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.modal-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 15px;
+}
+
+.preview-area {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.blinkie-preview {
+  width: 150px;
+  height: 20px;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 8px;
+  color: #fff;
+  text-shadow: 1px 1px 0px #000;
+  animation: blinkieAnim 1s steps(2, start) infinite;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.save-btn {
+  width: 100%;
+  background: #0066ff;
+  color: white;
+  border: 1px solid white;
+  padding: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* --- Ampliar contenedor para dar espacio a la columna eBay --- */
+.myspace-wrapper {
+  max-width: 1200px; /* Aumentado de 960px a 1200px para que encajen bien las 3 columnas */
+}
+
+/* --- Columna Estilo eBay Retro --- */
+.ebay-sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 0.85); /* Fondo blanco semitransparente retro */
+  border: 1px solid #cccccc;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000000;
+  border-right: 2px solid #ffcc00;
+}
+
+.ebay-section {
+  margin-bottom: 20px;
+}
+
+.ebay-header {
+  font-size: 15px;
+  font-weight: bold;
+  color: #000000;
+  background-color: #ffe680; /* Título resaltado con fondo amarillo retro */
+  padding: 3px 6px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid #e6b800;
+}
+
+.ebay-sidebar ul {
+  list-style-type: none;
+  padding-left: 5px;
+}
+
+.ebay-sidebar li {
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+
+.ebay-sidebar a {
+  color: #0000cc; /* Azul clásico de hipervínculo retro */
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.ebay-sidebar a:hover {
+  color: #ff0000;
+}
+
+.ebay-subtext {
+  font-size: 10px;
+  color: #555555;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.ebay-badge {
+  color: #cc0000;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.ebay-all-cats {
+  margin-top: 6px;
+  font-style: italic;
+}
